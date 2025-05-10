@@ -1,11 +1,10 @@
-import process from 'node:process';
 import type { Disposable, ExtensionContext, Webview } from 'vscode';
 import { window } from 'vscode';
 
 export class WebviewHelper {
   public static setupHtml(webview: Webview, context: ExtensionContext) {
     return __getWebviewHtml__({
-      serverUrl: process.env.VITE_DEV_SERVER_URL,
+      serverUrl: import.meta.env.VITE_DEV_SERVER_URL,
       webview,
       context,
     });

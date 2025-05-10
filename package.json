@@ -1,8 +1,12 @@
 {
   "name": "vscode-plugin-pmlike",
+  "displayName": "vscode-plugin-pmlike",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "publisher": "js5323",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -10,15 +14,17 @@
     "preview": "vite preview"
   },
   "main": "dist/extension/index.js",
+  "activationEvents": [],
   "contributes": {
     "commands": [
       {
         "command": "vscode-plugin-pmlike.showPMLike",
-        "title": "PM Like: Show"
+        "title": "PMLike:Show"
       }
     ]
   },
   "dependencies": {
+    "@vscode/webview-ui-toolkit": "^1.4.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.6.0"

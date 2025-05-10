@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router";
+import IndexView from "../views/IndexView";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello World</div>,
+    Component: IndexView,
   },
 ]);
 
