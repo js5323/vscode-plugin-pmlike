@@ -21,10 +21,30 @@
         "command": "vscode-plugin-pmlike.showPMLike",
         "title": "PMLike:Show"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "vscodePluginPMLike",
+          "title": "PMLike",
+          "icon": "icons/svg/API.svg"
+        }
+      ]
+    },
+    "views": {
+      "vscodePluginPMLike": [
+        {
+          "type": "webview",
+          "id": "vscode-plugin-pmlike.collectionMenu",
+          "name": "",
+          "contextualTitle": ""
+        }
+      ]
+    }
   },
   "dependencies": {
     "@vscode/webview-ui-toolkit": "^1.4.0",
+    "antd": "^5.25.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.6.0"

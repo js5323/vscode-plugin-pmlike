@@ -20,13 +20,13 @@ export class MainPanel {
     if (MainPanel.currentPanel) {
       MainPanel.currentPanel._panel.reveal(ViewColumn.One);
     } else {
-      const panel = window.createWebviewPanel('showHelloWorld', 'Hello World', ViewColumn.One, {
+      const panel = window.createWebviewPanel('showHelloWorld', 'PMLike APP', ViewColumn.One, {
         enableScripts: true,
       });
 
       MainPanel.currentPanel = new MainPanel(panel, context);
     }
-    MainPanel.currentPanel._panel.webview.postMessage({ type: 'hello', data: 'Hello World!' });
+    // MainPanel.currentPanel._panel.webview.postMessage({ type: 'hello', data: 'Hello World!' });
   }
 
   /**
